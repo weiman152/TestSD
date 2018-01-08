@@ -55,6 +55,7 @@
 		97C0A83E1FF6370800381183 /* TestSDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestSDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		97C0A8421FF6370800381183 /* TestSDUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestSDUITests.m; sourceTree = "<group>"; };
 		97C0A8441FF6370800381183 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		97C0A8501FF63B7000381183 /* TestSD.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestSD.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				97C0A81E1FF6370700381183 /* main.m */,
+				97C0A8501FF63B7000381183 /* TestSD.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -505,6 +507,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9ECXZ932UT;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestSD/TestSD.pch";
 				INFOPLIST_FILE = TestSD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aa.TestSD;
@@ -518,6 +521,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 9ECXZ932UT;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TestSD/TestSD.pch";
 				INFOPLIST_FILE = TestSD/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aa.TestSD;
@@ -590,6 +594,7 @@
 				97C0A8491FF6370800381183 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97C0A84A1FF6370800381183 /* Build configuration list for PBXNativeTarget "TestSDTests" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +603,7 @@
 				97C0A84C1FF6370800381183 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		97C0A84D1FF6370800381183 /* Build configuration list for PBXNativeTarget "TestSDUITests" */ = {
 			isa = XCConfigurationList;
@@ -606,6 +612,7 @@
 				97C0A84F1FF6370800381183 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,28 @@
+//
+//  TestSD.pch
+//  TestSD
+//
+//  Created by weiman on 2017/12/29.
+//  Copyright © 2017年 weiman. All rights reserved.
+//
+
+#ifndef TestSD_pch
+#define TestSD_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+//-------------------------import-------------------
+
+#import <SDWebImage/UIImage+GIF.h>
+#import <SDWebImage/UIImage+MultiFormat.h>
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <SDWebImage/UIButton+WebCache.h>
+#import <SDWebImage/UIImageView+HighlightedWebCache.h>
+
+//-------------------------define-------------------
+#define mScreenWidth [UIScreen mainScreen].bounds.size.width
+#define mScreenHeight  [UIScreen mainScreen].bounds.size.height
+
+
+#endif /* TestSD_pch */
