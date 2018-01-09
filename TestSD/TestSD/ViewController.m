@@ -21,10 +21,11 @@
     imageV.backgroundColor = [UIColor yellowColor];
     
     NSString * imageurl = @"http://images21.happyjuzi.com/test/ea/09/91f522741b7a0976b5f21a3b9f78.jpg!200.nw.webp";
+    //NSString * imageurl = @"http://oss.img.2or3m.com/videoimg/php/20171112/5a080c360c6c3.jpg";
     //1、加载网络图片
-    //[self loadWebImageWithUrl:imageurl andImageV:imageV];
+    [self loadWebImageWithUrl:imageurl andImageV:imageV];
     //2.加载webp图片
-    [self loadWebPImageWithUrl:imageurl andImageV:imageV];
+    //[self loadWebPImageWithUrl:imageurl andImageV:imageV];
     
 }
 
@@ -37,20 +38,24 @@
 -(void)loadWebImageWithUrl:(NSString *)imageurl andImageV:(UIImageView *)imageV{
     
     [imageV sd_setImageWithURL:[NSURL URLWithString:imageurl] completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
-        NSLog(@"图片展示成功");
+        if (error) {
+           NSLog(@"------- %@",error);
+        }else{
+           NSLog(@"图片展示成功");
+        }
     }];
 }
 
 -(void)loadWebPImageWithUrl:(NSString *)url andImageV:(UIImageView *)imageV{
-    
     NSError * error;
     NSData * data = [NSData dataWithContentsOfURL:[NSURL URLWithString:url] options:NSDataReadingMappedIfSafe error:&error];
     if (data) {
         UIImage * image = [UIImage sd_imageWithData:data];
         imageV.image = image;
     }else{
-        NSLog(@"惨兮兮，没有数据");
+        NSLog(@"没有拿到图片data");
     }
+    
 }
 
 
